@@ -1,6 +1,8 @@
+package selecttworandomwords;
+
 import java.util.*;
 
-public class Main {
+public class selectTwoRandomWords {
     public static void main(String[] args) {
 
         // 1- detect a word in a string
