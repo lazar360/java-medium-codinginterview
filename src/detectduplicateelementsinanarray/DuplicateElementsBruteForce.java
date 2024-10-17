@@ -9,17 +9,18 @@ import java.util.Set;
  * you can use various approaches such as using a HashSet, sorting the array,
  * or using nested loops
  */
-public class DuplicateElements {
+public class DuplicateElementsBruteForce {
 
     public static void main(String[] args) {
-        int[] nums = {1, 2, 3, 4, 5, 2, 6, 7, 8, 3}; // Example array with duplicates
-        Set<Integer> set = new HashSet<>();
+        int[] nums = {1, 2, 2}; // Example array with duplicates
         boolean hasDuplicates = false;
 
-        for (int num : nums) {
-            if (!set.add(num)) {
-                hasDuplicates = true;
-                break;
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i+1; j < nums.length; j++) {
+                if (nums[i] == nums[j]) {
+                    hasDuplicates = true;
+                    break;
+                }
             }
         }
 
